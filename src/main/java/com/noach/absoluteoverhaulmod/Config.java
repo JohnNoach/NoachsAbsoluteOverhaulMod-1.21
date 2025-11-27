@@ -1,4 +1,4 @@
-package com.minecraft.noach.absoluteoverhaulmod;
+package com.noach.absoluteoverhaulmod;
 
 import java.util.List;
 

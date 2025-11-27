@@ -1,4 +1,4 @@
-package com.minecraft.noach.absoluteoverhaulmod;
+package com.noach.absoluteoverhaulmod;
 
 import org.slf4j.Logger;
 
@@ -20,15 +20,15 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(AbsoluteOverhaulMod.MOD_ID)
-public class AbsoluteOverhaulMod {
+@Mod(NoachsAbsoluteOverhaulMod.MOD_ID)
+public class NoachsAbsoluteOverhaulMod {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "noach's_absolute_overhaul_mod";
+    public static final String MOD_ID = "noachs_absolute_overhaul_mod";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public AbsoluteOverhaulMod(IEventBus modEventBus, ModContainer modContainer) {
+    public NoachsAbsoluteOverhaulMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -69,7 +69,7 @@ public class AbsoluteOverhaulMod {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = AbsoluteOverhaulMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = NoachsAbsoluteOverhaulMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
